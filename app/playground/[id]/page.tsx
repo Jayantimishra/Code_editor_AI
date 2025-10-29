@@ -15,7 +15,8 @@ const Page =() => {
     return (
         <div>
             <> 
-            <TemplateFileTree />
+    
+    
 
             <SidebarInset>
                 <header className="px-4 gap-2 h-16 flex shrink-0 items-center border-b">
