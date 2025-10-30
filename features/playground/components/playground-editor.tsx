@@ -3,7 +3,7 @@
 import { useRef, useEffect, useCallback } from "react"
 import Editor, { type Monaco } from "@monaco-editor/react"
 import { TemplateFile } from "../types"
-import { configureMonaco, defaultEditorOptions, getEditorLanguage } from "../lib/editor-config"
+import { configureMonaco, defaultEditorOptions, getEditorLanguage } from "@/features/playground/lib/editor-config"
 
 interface PlaygroundEditorProps {
   activeFile: TemplateFile | undefined
