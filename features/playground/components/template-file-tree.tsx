@@ -1,3 +1,4 @@
+
 "use client";
 
 import * as React from "react";
@@ -67,7 +68,6 @@ interface TemplateFile {
   fileExtension: string;
   content: string;
 }
- 
 
 /**
  * Represents a folder in the template structure which can contain files and other folders

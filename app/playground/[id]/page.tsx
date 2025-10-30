@@ -15,6 +15,11 @@ const Page =() => {
     return (
         <div>
             <> 
+            <TemplateFileTree 
+            data ={templateData}
+            
+            />
+    
     
     
 
