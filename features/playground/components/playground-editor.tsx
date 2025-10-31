@@ -164,6 +164,7 @@ export const PlaygroundEditor = ({
       const provider = createInlineCompletionProvider(monacoRef.current)
 
       inlineCompletionProviderRef.current =
+      //@ts-ignore
         monacoRef.current.languages.registerInlineCompletionsProvider(language, provider)
 
       setTimeout(() => {
@@ -299,6 +300,7 @@ export const PlaygroundEditor = ({
         onChange={(value) => onContentChange(value || "")}
         onMount={handleEditorDidMount}
         language={activeFile ? getEditorLanguage(activeFile.fileExtension || "") : "plaintext"}
+        //@ts-ignore
         options={defaultEditorOptions}
       />
     </div>
