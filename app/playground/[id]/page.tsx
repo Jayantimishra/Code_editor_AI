@@ -204,15 +204,17 @@ const Page = () => {
           JSON.stringify(latestTemplateData)
         );
 
-        const updateFileContent = (items: any[]) =>
+        const updateFileContent = (
+          items: (TemplateFolder | TemplateFile)[]
+        ): (TemplateFolder | TemplateFile)[] =>
           items.map((item) => {
             if ("folderName" in item) {
-              return { ...item, items: updateFileContent(item.items) };
+              return { ...item, items: updateFileContent(item.items) } as TemplateFolder;
             } else if (
               item.filename === fileToSave.filename &&
               item.fileExtension === fileToSave.fileExtension
             ) {
-              return { ...item, content: fileToSave.content };
+              return { ...item, content: fileToSave.content } as TemplateFile;
             }
             return item;
           });
@@ -229,6 +231,7 @@ const Page = () => {
         }
 
         const newTemplateData = await saveTemplateData(updatedTemplateData);
+        //@ts-ignore
         setTemplateData(newTemplateData || updatedTemplateData);
 
         const updatedOpenFiles = openFiles.map((f) =>
