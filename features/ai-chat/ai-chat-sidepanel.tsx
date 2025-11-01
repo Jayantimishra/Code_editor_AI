@@ -1146,9 +1146,11 @@ export const AIChatSidePanel: React.FC<AIChatSidePanelProps> = ({
                           remarkPlugins={[remarkGfm, remarkMath]}
                           rehypePlugins={[rehypeKatex]}
                           components={{
+                            
                             code: ({
                               children,
                               className,
+                             //@ts-ignore
                               inline: _inline,
                             }) => (
                               <EnhancedCodeBlock
