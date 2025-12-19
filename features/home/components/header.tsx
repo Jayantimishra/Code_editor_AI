@@ -49,7 +49,7 @@ export function Header() {
                   {/* Desktop Navigation Links */}
                   <div className="hidden sm:flex items-center gap-4">
                     <Link
-                      href="/docs/components/background-paths"
+                      href="/docs"
                       className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
                     >
                       Docs
@@ -61,7 +61,7 @@ export function Header() {
                                             Pricing
                                         </Link> */}
                     <Link
-                      href="https://codesnippetui.pro/templates?utm_source=codesnippetui.com&utm_medium=header"
+                      href="https://api.vibecode.com"
                       target="_blank"
                       className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors flex items-center gap-2"
                     >
@@ -78,13 +78,12 @@ export function Header() {
                   <span className="text-zinc-300 dark:text-zinc-700">|</span>
                   {/* <HeaderPro /> */}
                   <ThemeToggle />
-                  <UserButton/>
+                  <UserButton />
                 </div>
 
                 {/* Mobile Navigation remains unchanged */}
-                 
+
                 <div className="flex sm:hidden items-center gap-4">
-                
                   <Link
                     href="/docs/components/action-search-bar"
                     className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
@@ -98,7 +97,7 @@ export function Header() {
                     API
                   </Link>
                   <ThemeToggle />
-                  <UserButton/>
+                  <UserButton />
                 </div>
               </div>
             </div>
